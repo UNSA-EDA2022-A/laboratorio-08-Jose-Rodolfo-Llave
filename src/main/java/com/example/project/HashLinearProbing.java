@@ -62,7 +62,7 @@ public class HashLinearProbing {
         }
 
         for (int i = 0; i < hsize; i++) {
-            if (buckets[hash] != null && buckets[hash].equals(dni)) {
+            if (buckets[hash] != null && buckets[hash].DNI.equals(dni)) {
                 buckets[hash].DNI = AVAILABLE;
                 size--;
                 return;
@@ -97,7 +97,7 @@ public class HashLinearProbing {
 
         for (int i = 0; i < hsize; i++) {
             try {
-                if (buckets[hash].equals(dni)) {
+                if (buckets[hash].DNI.equals(dni)) {
                     return buckets[hash].nombre;
                 }
             } catch (Exception E) {
